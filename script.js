@@ -6,6 +6,7 @@ const submitBook = document.querySelector(".submitBtn");
 const bookTitle = document.querySelector("#bookTitle");
 const bookAuthor = document.querySelector("#bookAuthor");
 const bookRead = document.querySelector("#bookRead");
+const form = document.querySelector("form");
 addBookBtn.addEventListener("click", () => {
   addBookDialog.showModal();
 });
@@ -14,7 +15,7 @@ closeDialog.addEventListener("click", () => {
 });
 
 let bookLibrary = [];
-submitBook.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const newBookTitle = bookTitle.value.trim();
   const newBookAuthor = bookAuthor.value.trim();
