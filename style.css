@@ -1,0 +1,155 @@
+:root {
+  --light-grey: #e2e8f0;
+  --color-light: #020617;
+  --background-color: var(--light-grey);
+  --color: var(--color-light);
+  --bg-light: #f8fafc;
+  --submit-bg: #33c3f0;
+  --submit-color: #fff;
+  --read-bg: #9fff9c;
+  --not-read-bg: #ff9c9c;
+  --remove-bg: #e41a67;
+  --remove-hov-bg: #cf185e;
+  --svg-light-filter: invert(2%) sepia(30%) saturate(7484%) hue-rotate(224deg)
+    brightness(90%) contrast(101%);
+  --svg-filter: var(--svg-light-filter);
+}
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: var(--bg-light);
+  box-shadow: 3px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.nav-bar h1 {
+  margin: 0;
+}
+.nav-bar .addBookBtn {
+  background-color: var(--background-color);
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.nav-bar .addBookBtn:hover,
+.nav-bar .addBookBtn:active {
+  background-color: var(--color-light);
+  color: var(--bg-light);
+}
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 24px;
+}
+.book {
+  background-color: var(--bg-light);
+  color: var(--color);
+  border-radius: 16px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+.bookCardTitle,
+.bookCardAuthor,
+.bookCardRead {
+  font-size: 24px;
+  font-weight: 700;
+}
+.read,
+.not-read,
+.remove {
+  color: var(--submit-color);
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.read {
+  background-color: var(--read-bg);
+}
+.not-read {
+  background-color: var(--not-read-bg);
+}
+.remove {
+  background-color: var(--remove-bg);
+}
+.remove:hover,
+.remove:active {
+  background-color: var(--remove-hov-bg);
+}
+dialog[open=""] {
+  background-color: var(--bg-light);
+  border: 0;
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+}
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+}
+.addBookForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inputGrp {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 8px;
+}
+.inputGrp input[type="text"] {
+  font-size: 24px;
+  width: 300px;
+}
+.inputGrp label {
+  font-size: 24px;
+}
+.bookSubmit {
+  margin: 16px;
+  text-align: center;
+}
+.submitBtn {
+  background-color: var(--submit-bg);
+  color: var(--submit-color);
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.submitBtn:hover,
+.submitBtn:active {
+  background-color: #1eaedb;
+}
+.closeBtn {
+  border: 0;
+  background-color: var(--bg-light);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.closeBtnImg {
+  height: 30px;
+  width: auto;
+  filter: var(--svg-filter);
+}
+.inputGrp select {
+  margin: 8px 0;
+  height: 35px;
+}

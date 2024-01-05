@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <h1>Library</h1>
+      <button class="addBookBtn">Add Book</button>
+    </nav>
+    <div class="library"></div>
+    <dialog class="addBookDialog">
+      <div class="close">
+        <button class="closeBtn">
+          <img src="./close.svg" alt="closeBtnImg" class="closeBtnImg" />
+        </button>
+      </div>
+      <form class="addBookForm">
+        <div class="inputGrp">
+          <label for="bookTitle">Book Title</label>
+          <input type="text" name="bookTitle" id="bookTitle" required />
+        </div>
+        <div class="inputGrp">
+          <label for="bookAuthor">Book Author</label>
+          <input type="text" name="BookAuthor" id="bookAuthor" required />
+        </div>
+        <div class="inputGrp">
+          <label for="bookRead">Have you read that book?</label>
+          <select name="bookRead" id="bookRead">
+            <option value="true">Yes, I have</option>
+            <option value="flse">No, I have not</option>
+          </select>
+        </div>
+        <div class="bookSubmit">
+          <button id="submitBtn" class="submitBtn">SUBMIT</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
