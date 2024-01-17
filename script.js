@@ -30,15 +30,17 @@ form.addEventListener("submit", (event) => {
     updateLibrary();
   }
 });
-function Book(title, author, read) {
-  this.title = title;
-  this.author = author;
-  this.read = Boolean(read);
+class Book {
+  constructor(title, author, read) {
+    this.title = title;
+    this.author = author;
+    this.read = Boolean(read);
+  }
+  readToggle() {
+    this.read = !this.read;
+    return this.read;
+  }
 }
-Book.prototype.readToggle = function () {
-  this.read = !this.read;
-  return this.read;
-};
 function checkRead() {
   if (bookRead.value === "true") {
     return true;
